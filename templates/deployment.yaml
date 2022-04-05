@@ -31,6 +31,11 @@ spec:
         - name: {{ .Values.componentName }}
           image: "{{ .Values.image.repo }}/{{ .Values.image.component}}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if .Values.configMap.enabled }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.componentName }}
+          {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
