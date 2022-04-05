@@ -9,7 +9,8 @@ serviceAccount:
   annotations: {}
   name: ""
 
-podAnnotations: {}
+podAnnotations:
+  roboshop62.xyz/component: frontend
 
 podSecurityContext: {}
   # fsGroup: 2000
