@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/frontend:1.0.4
+        image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/frontend:{{ .Values.tag }}
         ports:
         - containerPort: 80
