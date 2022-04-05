@@ -1,9 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repo: 739561048503.dkr.ecr.us-east-1.amazonaws.com
   pullPolicy: IfNotPresent
-  tag: latest
 
 serviceAccount:
   create: false
